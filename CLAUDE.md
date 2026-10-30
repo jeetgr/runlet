@@ -58,7 +58,7 @@ Runlet: sandboxed online code runner. pnpm + Bun + Turborepo monorepo. pnpm is t
 - Env access only via each app's `env.ts` (`@t3-oss/env-core` backend, t3-env frontend); no raw `process.env` / `import.meta.env`.
 - Validation with `valibot`, not zod.
 - Log with `@repo/logger`, never `console.log`.
-- Linter: oxlint (type-aware via tsgolint, `eslint-plugin-react-hooks` as JS plugin for web). Formatter: oxfmt. No Biome, ESLint or Prettier.
+- Linter: oxlint (type-aware via tsgolint, native `react` plugin hooks + React Compiler rules for web). Formatter: oxfmt. No Biome, ESLint or Prettier.
 
 ## Database (`packages/db`)
 

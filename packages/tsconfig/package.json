@@ -1,5 +1,9 @@
 {
   "name": "@repo/tsconfig",
   "private": true,
-  "files": ["base.json", "bun.json", "react.json"]
+  "files": [
+    "base.json",
+    "bun.json",
+    "react.json"
+  ]
 }
