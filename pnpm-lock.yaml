@@ -243,6 +243,28 @@ importers:
         specifier: 'catalog:'
         version: 7.0.2
 
+  apps/worker:
+    dependencies:
+      '@repo/logger':
+        specifier: workspace:*
+        version: link:../../packages/logger
+      '@t3-oss/env-core':
+        specifier: 'catalog:'
+        version: 0.13.11(typescript@7.0.2)(valibot@1.5.0(typescript@7.0.2))
+      valibot:
+        specifier: 'catalog:'
+        version: 1.5.0(typescript@7.0.2)
+    devDependencies:
+      '@repo/tsconfig':
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
+      '@types/bun':
+        specifier: 'catalog:'
+        version: 1.4.4
+      typescript:
+        specifier: 'catalog:'
+        version: 7.0.2
+
   packages/logger:
     dependencies:
       pino:

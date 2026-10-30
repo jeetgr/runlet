@@ -3,6 +3,16 @@ import pinoPretty from "pino-pretty";
 
 export type { Logger };
 
+export const logLevels = [
+  "fatal",
+  "error",
+  "warn",
+  "info",
+  "debug",
+  "trace",
+  "silent",
+] as const satisfies readonly LevelWithSilent[];
+
 export type CreateLoggerOptions = {
   name: string;
   level: LevelWithSilent;
