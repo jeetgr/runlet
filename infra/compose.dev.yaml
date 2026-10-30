@@ -1,0 +1,35 @@
+name: runlet-dev
+
+services:
+  postgres:
+    image: postgres:18.6-alpine
+    environment:
+      POSTGRES_USER: runlet
+      POSTGRES_PASSWORD: runlet
+      POSTGRES_DB: runlet
+    ports:
+      - "5432:5432"
+    volumes:
+      # Postgres 18+ images keep PGDATA under /var/lib/postgresql/<major>/docker.
+      - postgres-data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U runlet -d runlet"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+  redis:
+    image: redis:8.10.3-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+volumes:
+  postgres-data:
+  redis-data:

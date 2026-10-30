@@ -4,6 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "turbo dev",
+    "infra:up": "docker compose -f infra/compose.dev.yaml up -d --wait",
+    "infra:down": "docker compose -f infra/compose.dev.yaml down",
     "typecheck": "turbo typecheck",
     "lint": "bun --bun oxlint --deny-warnings",
     "lint:fix": "bun --bun oxlint --fix",
