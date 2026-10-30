@@ -4,7 +4,7 @@ Build order. One branch per phase, one commit per step. Each step: implement -> 
 
 ## Phase 0: Scaffold (`chore/scaffold`)
 
-1. Root: pnpm workspace, `catalog`, Turborepo, root tsconfig base, `.gitignore` (incl. `__temp__`), scripts `fmt`, `check`, `test`.
+1. Root: pnpm workspace, `catalog`, Turborepo, `packages/tsconfig` (base/bun/react presets), `.gitignore` (incl. `__temp__`), scripts `fmt`, `check`, `test`.
 2. `[VERIFY]` oxlint + oxfmt setup: type-aware linting (tsgolint) config, `eslint-plugin-react-hooks` via oxlint JS plugins (incl. React Compiler rules), oxfmt Tailwind class sorting. Report what works before configuring.
 3. oxlint + oxfmt configs, wire into `fmt` and `check`.
 4. `packages/logger`: pino logger export.

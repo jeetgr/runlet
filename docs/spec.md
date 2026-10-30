@@ -53,7 +53,7 @@ Interactive terminal/PTY, multi-file projects, package installs, network access 
 | Env               | `@t3-oss/env-core` (backend), t3-env (web)                                                                                                                                                                 |
 | Frontend          | Vite + React (React Compiler), TanStack Router, TanStack Query, `@orpc/tanstack-query`, Tailwind v4, Zustand, Monaco (`@monaco-editor/react`)                                                              |
 | Lint              | oxlint, type-aware (tsgolint), `eslint-plugin-react-hooks` via JS plugins for web `[VERIFY]`                                                                                                               |
-| Format            | oxfmt (pre-1.0; fallback: Prettier for formatting only), Tailwind class sorting `[VERIFY]`                                                                                                                 |
+| Format            | oxfmt: import, package.json, Tailwind class sorting `[VERIFY]`                                                                                                                                             |
 | Tests             | `bun test`; sandbox attack tests need Docker                                                                                                                                                               |
 | Load test         | k6                                                                                                                                                                                                         |
 | Deploy            | Single VPS, docker compose, Caddy (TLS + static web + reverse proxy)                                                                                                                                       |
@@ -123,6 +123,7 @@ packages/
       generated/db.d.ts       kysely-codegen output
   logger/
     src/index.ts
+  tsconfig/               shared tsconfig presets: base.json, bun.json, react.json
 sandbox/
   images/<lang>/Dockerfile
   seccomp.json                optional, later
