@@ -1,0 +1,8 @@
+packages:
+  - apps/*
+  - packages/*
+
+catalog:
+  "@types/bun": 1.4.4
+  turbo: 2.11.10
+  typescript: 7.0.2
