@@ -3,11 +3,14 @@ packages:
   - packages/*
 
 catalog:
+  "@t3-oss/env-core": 0.13.11
   "@types/bun": 1.4.4
+  hono: 4.13.14
   oxfmt: 0.75.0
-  pino: 10.4.0
-  pino-pretty: 13.2.0
   oxlint: 1.90.0
   oxlint-tsgolint: 7.0.2005
+  pino: 10.4.0
+  pino-pretty: 13.2.0
   turbo: 2.11.10
   typescript: 7.0.2
+  valibot: 1.5.0
